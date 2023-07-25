@@ -15,10 +15,17 @@
 PhoneBook::PhoneBook()
 {
 	this->_index = 0;
-	return	;
+	return;
 }
 
 PhoneBook::~PhoneBook()
 {
-	return	;
+	return;
+}
+
+void	PhoneBook::set_contact(void)
+{
+	this->_index %= 8;
+	this->_contact[this->_index].fill_form();
+	this->_index++;
 }

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+#include <iostream>
 
 Contact::Contact()
 {
@@ -48,32 +49,46 @@ std::string Contact::get_email(void)
 	return (this->_email);
 }
 
-void	Contact::set_first_name(std::string first_name)
+void	Contact::set_first_name(std::istream& in)
 {
-	this->_first_name = first_name;
+	getline(in, this->_first_name);
 	return;
 }
 
-void	Contact::set_last_name(std::string last_name)
+void	Contact::set_last_name(std::istream& in)
 {
-	this->_last_name = last_name;
+	getline(in, this->_last_name);
 	return;
 }
 
-void	Contact::set_nickname(std::string nickname)
+void	Contact::set_nickname(std::istream& in)
 {
-	this->_nickname = nickname;
+	getline(in, this->_nickname);
 	return;
 }
 
-void	Contact::set_phone(std::string phone)
+void	Contact::set_phone(std::istream& in)
 {
-	this->_phone = phone;
+	getline(in, this->_phone);
 	return;
 }
 
-void	Contact::set_email(std::string email)
+void	Contact::set_email(std::istream& in)
 {
-	this->_email = email;
+	getline(in, this->_email);
 	return;
+}
+
+void	Contact::fill_form()
+{
+	std::cout << "Type the first name" << std::endl;
+	set_first_name(std::cin);
+	std::cout << "Type the last name" << std::endl;
+	set_last_name(std::cin);
+	std::cout << "Type the nickname" << std::endl;
+	set_nickname(std::cin);
+	std::cout << "Type the phone number" << std::endl;
+	set_nickname(std::cin);
+	std::cout << "Type the email" << std::endl;
+	set_nickname(std::cin);
 }

@@ -23,5 +23,6 @@ class PhoneBook
 	public:
 		PhoneBook(void);
 		~PhoneBook(void);
+        void	set_contact(void);
 };
 #endif

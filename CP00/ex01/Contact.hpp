@@ -31,10 +31,11 @@ class Contact
 		std::string	get_nickname(void);
 		std::string	get_phone(void);
 		std::string	get_email(void);
-		void	set_first_name(std::string first_name);
-		void	set_last_name(std::string last_name);
-		void	set_nickname(std::string nick_name);
-		void	set_phone(std::string phone);
-		void	set_email(std::string email);
+		void	set_first_name(std::istream& in);
+		void	set_last_name(std::istream& in);
+		void	set_nickname(std::istream& in);
+		void	set_phone(std::istream& in);
+		void	set_email(std::istream& in);
+        void	fill_form();
 };
 #endif
