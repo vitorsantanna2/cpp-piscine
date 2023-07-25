@@ -44,9 +44,9 @@ std::string Contact::get_phone(void)
 	return (this->_phone);
 }
 
-std::string Contact::get_email(void)
+std::string Contact::get_darkest_secret(void)
 {
-	return (this->_email);
+	return (this->_darkest_secret);
 }
 
 void	Contact::set_first_name(std::istream& in)
@@ -73,9 +73,9 @@ void	Contact::set_phone(std::istream& in)
 	return;
 }
 
-void	Contact::set_email(std::istream& in)
+void	Contact::set_darkest_secret(std::istream& in)
 {
-	getline(in, this->_email);
+	getline(in, this->_darkest_secret);
 	return;
 }
 
@@ -88,7 +88,8 @@ void	Contact::fill_form()
 	std::cout << "Type the nickname" << std::endl;
 	set_nickname(std::cin);
 	std::cout << "Type the phone number" << std::endl;
-	set_nickname(std::cin);
-	std::cout << "Type the email" << std::endl;
-	set_nickname(std::cin);
+	set_phone(std::cin);
+	std::cout << "Type the darkest secret" << std::endl;
+	set_darkest_secret(std::cin);
+	std::cout << "Contact added!" << std::endl;
 }
