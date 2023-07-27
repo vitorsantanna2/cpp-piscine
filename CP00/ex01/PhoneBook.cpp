@@ -32,6 +32,14 @@ void	PhoneBook::set_contact(void)
 	this->_index++;
 }
 
+bool is_number(const std::string& s)
+{
+    std::string::const_iterator it = s.begin();
+    while (it != s.end() && std::isdigit(*it))
+		++it;
+    return !s.empty() && it == s.end();
+}
+
 void	PhoneBook::search_contact(void) const
 {
 	int	i;
@@ -44,6 +52,12 @@ void	PhoneBook::search_contact(void) const
 	std::cout << std::setw(11) << "first name|";
 	std::cout << std::setw(11) << "last name|";
 	std::cout << std::setw(10) << "nickname" << std::endl;
+	if (this->_index == 0)
+	{
+		std::cout << std::setw(30) << "Phonebook is empty!" << std::endl;
+		std::cout << "Menu: ";
+		return ;
+	}
 	while (i < this->_index)
 	{
 		this->_contact[i].printform(i);
@@ -54,7 +68,13 @@ void	PhoneBook::search_contact(void) const
 	{
 		std::cout << "Index Number: ";
 		std::cin >> i_str;
-		index = stoi(i_str);
+		if (is_number(i_str))
+			index = stoi(i_str);
+		else
+		{
+			std::cout << "Insert a valid number" << std::endl;
+			continue;
+		}
 		if (index >= 0 && index < 8)
 			exist = this->_contact[index].printcontact(index);
 		else
