@@ -56,8 +56,8 @@ void	PhoneBook::search_contact(void) const
 		std::cin >> i_str;
 		index = stoi(i_str);
 		if (index >= 0 && index < 8)
-		{
 			exist = this->_contact[index].printcontact(index);
-		}
+		else
+			std::cout << "Index Invalid" << std::endl;
 	}
 }

@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-#include <iostream>
 
 Contact::Contact()
 {
@@ -121,11 +120,14 @@ int	Contact::printcontact(int i) const
 		std::cout << "Index Invalid" << std::endl;
 		return	(0);
 	}
-	std::cout << get_first_name() << std::endl;
-	std::cout << get_last_name() << std::endl;
-	std::cout << get_nickname() << std::endl;
-	std::cout << get_phone() << std::endl;
-	std::cout << get_darkest_secret() << std::endl;
+	std::cout << "*************************" << std::endl;
+	std::cout << "Index: " << i << std::endl;
+	std::cout << "First Name: " << get_first_name() << std::endl;
+	std::cout << "Last Name: " << get_last_name() << std::endl;
+	std::cout << "Nickname: " << get_nickname() << std::endl;
+	std::cout << "Phone: " << get_phone() << std::endl;
+	std::cout << "Darkest Secret: " << get_darkest_secret() << std::endl;
+	std::cout << "*************************" << std::endl;
 	return (1);
 }
 

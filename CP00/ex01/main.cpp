@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include <string.h>
-#include <iostream>
 
 int	main(void)
 {
@@ -29,7 +27,7 @@ int	main(void)
 	while (input.compare("EXIT"))
 	{
 		if (input.compare(""))
-			std::cout << "Menu: "; //BUG WRITING DOUBLE TIME AFTER THE SEARCH
+			std::cout << "Menu: ";
 		std::getline(std::cin, input);
 		if (!input.compare("ADD"))
 			book.set_contact();
@@ -40,5 +38,6 @@ int	main(void)
 		}
 		else if (!input.compare(""))
 			input = " ";
-	}
+	}		if (!input.compare(""))
+			input = "";
 }

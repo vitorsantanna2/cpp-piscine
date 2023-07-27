@@ -14,6 +14,8 @@
 # define PhoneBook_hpp
 
 # include "Contact.hpp"
+# include <string>
+# include <iostream>
 
 class PhoneBook
 {
