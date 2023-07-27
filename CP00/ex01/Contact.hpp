@@ -14,6 +14,7 @@
 # define Contact_hpp
 
 # include <string>
+# include <iomanip>
 class Contact
 {
 	private:
@@ -22,20 +23,24 @@ class Contact
 		std::string	_nickname;
 		std::string	_phone;
 		std::string	_darkest_secret;
-		bool		_init;
+		int		_value;
 	public:
 		Contact(void);
 		~Contact(void);
-		std::string	get_first_name(void);
-		std::string	get_last_name(void);
-		std::string	get_nickname(void);
-		std::string	get_phone(void);
-		std::string	get_darkest_secret(void);
+		int	get_value(void) const;
+		std::string	get_first_name(void) const;
+		std::string	get_last_name(void) const;
+		std::string	get_nickname(void) const;
+		std::string	get_phone(void) const;
+		std::string	get_darkest_secret(void) const;
 		void	set_first_name(std::istream& in);
 		void	set_last_name(std::istream& in);
 		void	set_nickname(std::istream& in);
 		void	set_phone(std::istream& in);
 		void	set_darkest_secret(std::istream& in);
+        void	set_value();
+        void	printform(int i) const;
+        int		printcontact(int i) const;
         void	fill_form();
 };
 #endif

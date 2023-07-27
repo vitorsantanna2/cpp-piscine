@@ -19,18 +19,26 @@ int	main(void)
 	std::string	input;
 	PhoneBook	book;
 
-	input = "text";
+	input = "";
 	std::cout << "Welcome to the Santanna Books!" << std::endl;
 	std::cout << "The best phonebook of Earth!" << std::endl;
+	std::cout << "Please, type 'ADD' to add new contacts" << std::endl;
+	std::cout << "Type 'SEARCH' to search anyone contact" << std::endl;
+	std::cout << "Type 'EXIT' to exit the program" << std::endl;
+	std::cout << "Menu: ";
 	while (input.compare("EXIT"))
 	{
-		std::cout << "Please, type 'ADD' to add new contacts" << std::endl;
-		std::cout << "Type 'SEARCH' to search anyone contact" << std::endl;
-		std::cout << "Type 'EXIT' to exit the program" << std::endl;
+		if (input.compare(""))
+			std::cout << "Menu: "; //BUG WRITING DOUBLE TIME AFTER THE SEARCH
 		std::getline(std::cin, input);
 		if (!input.compare("ADD"))
-		{
 			book.set_contact();
+		else if (!input.compare("SEARCH"))
+		{
+			book.search_contact();
+			input = "";
 		}
+		else if (!input.compare(""))
+			input = " ";
 	}
 }

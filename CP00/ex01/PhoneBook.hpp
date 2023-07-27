@@ -24,5 +24,6 @@ class PhoneBook
 		PhoneBook(void);
 		~PhoneBook(void);
         void	set_contact(void);
+		void	search_contact(void) const;
 };
 #endif
