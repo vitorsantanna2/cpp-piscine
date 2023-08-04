@@ -6,7 +6,7 @@
 #    By: jsantann <jsantann@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/13 16:35:03 by jsantann          #+#    #+#              #
-#    Updated: 2023/08/02 16:04:44 by jsantann         ###   ########.fr        #
+#    Updated: 2023/08/03 17:47:52 by vitorsantanna    ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 ##########################################################
 
 NAME		:= replace
-CC			:= c++
+CC		:= c++
 CFLAGS		:= -Wall -Wextra -Werror -std=c++98 -Iincludes
 DEBUG		:= -g
 
