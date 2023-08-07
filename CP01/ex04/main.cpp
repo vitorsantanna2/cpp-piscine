@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <cstring>
 
 void	error()
 {
@@ -27,29 +28,24 @@ std::string copyfile(char **argv)
 	return (line);
 }
 
-std::string	change_text(std::string text, char **argv)
+std::string change_text(std::string text, char **argv)
 {
 	std::string	temp;
+	std::string	subs;
 	std::string	line;
-	std::string	newvalue;
-	std::string	result;
-	std::istringstream iss(text);
+	size_t		temp2;
 
-	while(std::getline(iss, line))
+	while (42)
 	{
-		while (iss >> temp) {
-			if (!temp.compare(argv[2]))
-			{
-				newvalue.append(argv[3]);
-				result.append(newvalue);
-			}
-			else
-				result.append(temp);
-		}
-		result.append("\n");
+		temp2 = text.find(argv[2]);
+		if (temp2 == text.npos)
+			break;
+		text.erase(temp2, strlen(argv[2]));
+		text.insert(temp2, argv[3]);
 	}
-	return (result);
+	return (text);
 }
+
 void	create_file(char **argv, std::string text)
 {
 	std::string  replace_file;
