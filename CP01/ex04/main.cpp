@@ -32,16 +32,20 @@ std::string change_text(std::string text, char **argv)
 {
 	std::string	temp;
 	std::string	subs;
-	std::string	line;
+	int	i;
 	size_t		temp2;
 
+	i = 0;
 	while (42)
 	{
 		temp2 = text.find(argv[2]);
+		if (temp2 == text.npos && i == 0)
+			error();
 		if (temp2 == text.npos)
 			break;
 		text.erase(temp2, strlen(argv[2]));
 		text.insert(temp2, argv[3]);
+		i++;
 	}
 	return (text);
 }
