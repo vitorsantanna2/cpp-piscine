@@ -6,7 +6,7 @@
 /*   By: jsantann <jsantann@student.42.rio>          +#+  +:+     +#+         */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 16:33:06 by jsantann          #+#    #+#             */
-/*   Updated: 2023/08/18 16:47:08 by jsantann         ###   ########.fr       */
+/*   Updated: 2023/08/21 14:03:25 by vitorsantanna    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class	Fixed
 		Fixed(Fixed const &Fix);
 		Fixed &operator=(Fixed const &fix);
 		~Fixed();
-		int	getRawBits(void);
+		int	getRawBits(void) const;
 		void	setRawBits(int const raw);
-}
+};
+
+#endif

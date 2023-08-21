@@ -3,6 +3,7 @@
 Fixed::Fixed()
 {
 	std::cout << "Default constructor called" << std::endl;
+	setRawBits(0);
 }
 
 Fixed::Fixed(Fixed const &fix)
@@ -23,7 +24,7 @@ Fixed::~Fixed()
 	std::cout << "Destructor called" << std::endl;
 }
 
-int	Fixed::getRawBits(void)
+int	Fixed::getRawBits(void) const
 {
 	return (this->_num);
 }

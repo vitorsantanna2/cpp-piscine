@@ -6,7 +6,7 @@
 #    By: jsantann <jsantann@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/13 16:35:03 by jsantann          #+#    #+#              #
-#    Updated: 2023/08/18 16:49:27 by jsantann         ###   ########.fr        #
+#    Updated: 2023/08/21 14:17:17 by vitorsantanna    ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 		@echo "$(GREEN)Compilation ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
-		@ c++ -o $@ $^ 
+		@ ${CC} ${CFLAGS} -o $@ $^ 
 		@ echo "$(GREEN)$(NAME) created ✔️"
 
 clean:
