@@ -6,11 +6,11 @@
 /*   By: jsantann <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 16:48:30 by jsantann          #+#    #+#             */
-/*   Updated: 2023/08/22 19:51:10 by vitorsantanna    ###   ########.fr       */
+/*   Updated: 2023/08/22 20:05:28 by vitorsantanna    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void)
 {
@@ -20,10 +20,11 @@ int	main(void)
 	ally = "Hulk";
 	enemy = "Mercúrio";
 	ClapTrap clap(ally);
-	ScavTrap scav(ally);
-	ScavTrap scav2(enemy);
+	FragTrap frag(ally);
+	FragTrap frag2(enemy);
 
 	clap.attack(enemy);
-	scav.attack(enemy);
+	frag.attack(enemy);
+	frag.highFivesGuys();
 	return (0);
 }

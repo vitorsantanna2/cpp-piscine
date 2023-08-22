@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsantann <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/22 16:48:30 by jsantann          #+#    #+#             */
-/*   Updated: 2023/08/22 19:51:10 by vitorsantanna    ###   ########.fr       */
+/*   Created: 2023/08/22 16:15:38 by jsantann          #+#    #+#             */
+/*   Updated: 2023/08/22 19:56:37 by vitorsantanna    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef ScavTrap_hpp
+# define ScavTrap_hpp
 
-int	main(void)
+# include "ClapTrap.hpp"
+
+class ScavTrap : public ClapTrap
 {
-	std::string ally;
-	std::string enemy;
+	public:
+		ScavTrap(std::string& name);
+		ScavTrap(ScavTrap const &scav);
+		ScavTrap &operator=(ScavTrap const &scav);
+		~ScavTrap();
+		virtual void	attack(const std::string& target);
+		void	guardGate();
+};
 
-	ally = "Hulk";
-	enemy = "Mercúrio";
-	ClapTrap clap(ally);
-	ScavTrap scav(ally);
-	ScavTrap scav2(enemy);
-
-	clap.attack(enemy);
-	scav.attack(enemy);
-	return (0);
-}
+#endif

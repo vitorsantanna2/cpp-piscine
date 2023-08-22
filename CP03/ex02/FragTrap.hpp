@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsantann <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/22 16:48:30 by jsantann          #+#    #+#             */
-/*   Updated: 2023/08/22 19:51:10 by vitorsantanna    ###   ########.fr       */
+/*   Created: 2023/08/22 16:15:38 by jsantann          #+#    #+#             */
+/*   Updated: 2023/08/22 20:04:49 by vitorsantanna    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef FragTrap_hpp
+# define FragTrap_hpp
 
-int	main(void)
+# include "ClapTrap.hpp"
+
+class FragTrap : public ClapTrap
 {
-	std::string ally;
-	std::string enemy;
+	public:
+		FragTrap(std::string& name);
+		FragTrap(FragTrap const &frag);
+		FragTrap &operator=(FragTrap const &frag);
+		~FragTrap();
+		virtual void	attack(const std::string& target);
+		void	highFivesGuys(void);
+};
 
-	ally = "Hulk";
-	enemy = "Mercúrio";
-	ClapTrap clap(ally);
-	ScavTrap scav(ally);
-	ScavTrap scav2(enemy);
-
-	clap.attack(enemy);
-	scav.attack(enemy);
-	return (0);
-}
+#endif

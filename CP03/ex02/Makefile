@@ -6,7 +6,7 @@
 #    By: jsantann <jsantann@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/13 16:35:03 by jsantann          #+#    #+#              #
-#    Updated: 2023/08/22 20:06:58 by vitorsantanna    ###   ########.fr        #
+#    Updated: 2023/08/22 20:05:58 by vitorsantanna    ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 #					FLAGS								#
 ##########################################################
 
-NAME		:= ScavTrap
+NAME		:= FragTrap
 CC		:= c++
 CFLAGS		:= -Wall -Wextra -Werror -std=c++98 -Iincludes
 DEBUG		:= -g
@@ -25,6 +25,7 @@ DEBUG		:= -g
 
 SRCS		:= ClapTrap.cpp \
 		   ScavTrap.cpp \
+		   FragTrap.cpp \
 		   main.cpp
 
 OBJS		:= $(SRCS:.c=.o)
