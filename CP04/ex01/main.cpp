@@ -22,7 +22,6 @@ int main()
 	{
 		delete firmino[i];
 	}
-	*/
 	std::string value = "teste";
 	int j = 0;
 	Dog rubens;
@@ -40,4 +39,9 @@ int main()
 		std::cout << vasco.getBrain()->getIdeas(j) << std::endl;
 		j++;
 	}
+	*/
+	const Animal* j = new Dog();
+const Animal* i = new Cat();
+delete j;//should not create a leak
+delete i;
 }
