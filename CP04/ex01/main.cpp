@@ -6,26 +6,38 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	const WrongAnimal* s = new WrongAnimal();
-	const WrongAnimal* f = new WrongCat();
-	
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
+	/*int	i;
+	Animal* firmino[100];
 
-	std::cout << s->getType() << " says ";
-	s->makeSound();
-	std::cout << f->getType() << " says ";
-	f->makeSound();
-	delete meta;
-	delete j;
-	delete i;
-	delete s;
-	delete f;
-	return (0);
+	for (i = 0; i < 50; i++)
+	{
+		firmino[i] = new Dog();
+	}
+	for (i = 50; i < 100; i++)
+	{
+		firmino[i] = new Cat();
+	}
+
+	for (i = 0; i < 100; i++)
+	{
+		delete firmino[i];
+	}
+	*/
+	std::string value = "teste";
+	int j = 0;
+	Dog rubens;
+	while (j < 10)
+	{
+		rubens.getBrain()->setIdeas(j, value);
+		//std::cout << rubens->getBrain()->getIdeas(j) << std::endl;
+		j++;
+	}
+	Dog	vasco;
+	vasco = rubens;
+	j = 0;
+	while (j < 10)
+	{
+		std::cout << vasco.getBrain()->getIdeas(j) << std::endl;
+		j++;
+	}
 }

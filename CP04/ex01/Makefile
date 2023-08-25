@@ -6,7 +6,7 @@
 #    By: jsantann <jsantann@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/13 16:35:03 by jsantann          #+#    #+#              #
-#    Updated: 2023/08/23 11:12:00 by vitorsantanna    ###   ########.fr        #
+#    Updated: 2023/08/23 13:38:19 by vitorsantanna    ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ DEBUG		:= -g
 SRCS		:= Animal.cpp \
 		   Dog.cpp \
 		   Cat.cpp \
+		   Brain.cpp \
 		   WrongAnimal.cpp \
 		   WrongCat.cpp \
 		   main.cpp
