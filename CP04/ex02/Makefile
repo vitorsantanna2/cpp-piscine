@@ -6,7 +6,7 @@
 #    By: jsantann <jsantann@student.42.rio>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/13 16:35:03 by jsantann          #+#    #+#              #
-#    Updated: 2023/08/25 17:58:42 by jsantann         ###   ########.fr        #
+#    Updated: 2023/08/25 17:53:23 by jsantann         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 ##########################################################
 
 NAME		:= Polymorphism
-CXX		:= c++
+CC		:= c++
 CFLAGS		:= -Wall -Wextra -Werror -std=c++98 -Iincludes
 DEBUG		:= -g
 
@@ -23,9 +23,10 @@ DEBUG		:= -g
 #					PROGRAM`S SRCS						 #
 ##########################################################
 
-SRCS		:= Animal.cpp \
+SRCS		:= AAnimal.cpp \
 		   Dog.cpp \
 		   Cat.cpp \
+		   Brain.cpp \
 		   WrongAnimal.cpp \
 		   WrongCat.cpp \
 		   main.cpp
@@ -37,7 +38,7 @@ OBJS		:= $(SRCS:.c=.o)
 #########################################################
 
 CLR_RMV	:= \033[0m
-RED	:= \033[1;31m
+RED		:= \033[1;31m
 GREEN	:= \033[1;32m
 YELLOW	:= \033[1;33m
 BLUE    := \033[1;34m
@@ -51,7 +52,7 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 		@echo "$(GREEN)Compilation ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
-		@ ${CXX} ${CFLAGS} -o $@ $^ 
+		@ ${CC} ${CFLAGS} -o $@ $^ 
 		@ echo "$(GREEN)$(NAME) created ✔️"
 
 clean:

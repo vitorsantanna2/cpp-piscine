@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vitorsantanna <marvin@42.fr>               +#+  +:+       +#+        */
+/*   By: jsantann <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/22 20:35:49 by vitorsantanna     #+#    #+#             */
-/*   Updated: 2023/08/25 18:12:41 by jsantann         ###   ########.fr       */
+/*   Created: 2023/08/25 17:49:25 by jsantann          #+#    #+#             */
+/*   Updated: 2023/08/25 18:17:33 by jsantann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal()
+Cat::Cat() : AAnimal()
 {
 	std::cout << "Cat constructor called" << std::endl;
 	brain = new Brain();
@@ -20,9 +20,9 @@ Cat::Cat() : Animal()
 	return ;
 }
 
-Cat::Cat(Cat const &cat) : Animal()
+Cat::Cat(Cat const &cat) : AAnimal()
 {
-	std::cout << "Cat copy constructor called" << std::endl;
+	std::cout << "Operator copy constructor called" << std::endl;
 	this->type = cat.type;
 	this->brain = new Brain(*cat.brain);
 }
